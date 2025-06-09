@@ -1,10 +1,9 @@
-
+import './styles/App.scss';
 
 function App() {
 
   return (
-   <div>
-    init
+   <div className='app'>
    </div>
   )
 }
