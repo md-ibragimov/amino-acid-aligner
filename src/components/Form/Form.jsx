@@ -10,18 +10,16 @@ import {
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-export default function Form() {
+export default function Form({ firstValue, secondValue, setFirstValue, setSecondValue, setShowInput }) {
     const [isOpen, setIsOpen] = useState(false);
     const [errorText, setIsErrorText] = useState('');
-    const [firstValue, setFirstValue] = useState('');
-    const [secondValue, setSecondValue] = useState('');
     let timeoutId;
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         if (firstValue.length === secondValue.length && firstValue.length > 0) {
-            console.log(true);
+            setShowInput(true);
         }
         else {
             setIsErrorText('Длина строк отличается.');
@@ -32,6 +30,7 @@ export default function Form() {
     const handleFormValue = (value, mode) => {
         value = value.toUpperCase().trim();
         const validateArr = ['A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V', '-']
+        setShowInput(false);
 
         if (validateArr.includes(value[value.length - 1]) || value.length === 0) {
             if (mode === 1) {
