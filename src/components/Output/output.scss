@@ -1,0 +1,32 @@
+.letter-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.cysteine-color {
+  background-color: #FFEA00;
+}
+
+.hydrophobic-color {
+  background-color: #67E4A6;
+}
+
+.glycine-color {
+  background-color: #C4C4C4;
+}
+
+.negatively-charged-color {
+  background-color: #FC9CAC;
+}
+
+.positive-charged-color {
+  background-color: #BB99FF;
+}
+
+.polar-uncharged-color {
+  background-color: #80BFFF;
+}
